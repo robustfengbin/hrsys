@@ -1,0 +1,112 @@
+<%- model_class = Employee -%>
+<div class="page-header">
+  <h1>人员信息</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:姓名) %></th>
+      <th><%= model_class.human_attribute_name(:中心) %></th>
+      <th><%= model_class.human_attribute_name(:部门) %></th>
+      <th><%= model_class.human_attribute_name(:职位) %></th>
+      <th><%= model_class.human_attribute_name(:身份证) %></th>
+      <th><%= model_class.human_attribute_name(:员工状态) %></th>
+      <th><%= model_class.human_attribute_name(:入职时间) %></th>
+      <th><%= model_class.human_attribute_name(:转正时间) %></th>
+      <th><%= model_class.human_attribute_name(:合同到期时间) %></th>
+      <th><%= model_class.human_attribute_name(:司龄) %></th>
+      <th><%= model_class.human_attribute_name(:性别) %></th>
+      <th><%= model_class.human_attribute_name(:生日) %></th>
+      <th><%= model_class.human_attribute_name(:年龄) %></th>
+      <th><%= model_class.human_attribute_name(:民族) %></th>
+      <th><%= model_class.human_attribute_name(:婚姻状况) %></th>
+      <th><%= model_class.human_attribute_name(:户口所在地) %></th>
+      <th><%= model_class.human_attribute_name(:户口性质) %></th>
+      <th><%= model_class.human_attribute_name(:冢庭住址) %></th>
+      <th><%= model_class.human_attribute_name(:教育开始时间) %></th>
+      <th><%= model_class.human_attribute_name(:教育结束时间) %></th>
+      <th><%= model_class.human_attribute_name(:毕业学校) %></th>
+      <th><%= model_class.human_attribute_name(:专业) %></th>
+      <th><%= model_class.human_attribute_name(:最高学历) %></th>
+      <th><%= model_class.human_attribute_name(:学位) %></th>
+      <th><%= model_class.human_attribute_name(:参加工作时间) %></th>
+      <th><%= model_class.human_attribute_name(:原工作单位) %></th>
+      <th><%= model_class.human_attribute_name(:原工作职位) %></th>
+      <th><%= model_class.human_attribute_name(:社保缴存情) %></th>
+      <th><%= model_class.human_attribute_name(:住房公积金缴存情况) %></th>
+      <th><%= model_class.human_attribute_name(:银行) %></th>
+      <th><%= model_class.human_attribute_name(:联系电话) %></th>
+      <th><%= model_class.human_attribute_name(:邮箱) %></th>
+      <th><%= model_class.human_attribute_name(:离职日期) %></th>
+      <th><%= model_class.human_attribute_name(:调岗记录) %></th>
+      <th><%= model_class.human_attribute_name(:备注) %></th>
+      <th><%= model_class.human_attribute_name(:创建时间) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= link_to employee.id, employee_path(employee) %></td>
+        <td><%= employee.name %></td>
+        <td><%= employee.center %></td>
+        <td><%= employee.department %></td>
+        <td><%= employee.job %></td>
+        <td><%= employee.idcard %></td>
+        <td><%= employee.status %></td>
+        <td><%= employee.join_date %></td>
+        <td><%= employee.positive_date %></td>
+        <td><%= employee.contract_end_date %></td>
+        <td><%= employee.seniority %></td>
+        <%if employee.sex =="0"%>
+           <% sex_str = "男"%>
+            <%else sex_str="女"%>
+        <%end%>
+        <td><%= sex_str %></td>
+        <td><%= employee.birthday %></td>
+        <td><%= employee.age %></td>
+        <td><%= employee.nation %></td>
+        <%if employee.marriage =="0"%>
+            <% marriage_str = "未婚"%>
+        <%else marriage_str="已婚"%>
+        <%end%>
+        <td><%= marriage_str %></td>
+        <td><%= employee.account_place %></td>
+        <td><%= employee.account_nature %></td>
+        <td><%= employee.address %></td>
+        <td><%= employee.edu_start %></td>
+        <td><%= employee.edu_end %></td>
+        <td><%= employee.edu_college %></td>
+        <td><%= employee.major %></td>
+        <td><%= employee.high_education %></td>
+        <td><%= employee.degree %></td>
+        <td><%= employee.join_work_date %></td>
+        <td><%= employee.before_company %></td>
+        <td><%= employee.before_job %></td>
+        <td><%= employee.social_security %></td>
+        <td><%= employee.house_fund %></td>
+        <td><%= employee.bank %></td>
+        <td><%= employee.tel %></td>
+        <td><%= employee.email %></td>
+        <td><%= employee.leave_date %></td>
+        <td><%= employee.transfer_position %></td>
+        <td><%= employee.remark %></td>
+        <td><%=l employee.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_employee_path(employee), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      employee_path(employee),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_employee_path,
+            :class => 'btn btn-primary' %>

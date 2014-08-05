@@ -1,0 +1,89 @@
+<%- model_class = Employee -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @employee.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:center) %>:</strong></dt>
+  <dd><%= @employee.center %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:department) %>:</strong></dt>
+  <dd><%= @employee.department %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:job) %>:</strong></dt>
+  <dd><%= @employee.job %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idcard) %>:</strong></dt>
+  <dd><%= @employee.idcard %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
+  <dd><%= @employee.status %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:join_date) %>:</strong></dt>
+  <dd><%= @employee.join_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:positive_date) %>:</strong></dt>
+  <dd><%= @employee.positive_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:contract_end_date) %>:</strong></dt>
+  <dd><%= @employee.contract_end_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:seniority) %>:</strong></dt>
+  <dd><%= @employee.seniority %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sex) %>:</strong></dt>
+  <dd><%= @employee.sex %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:birthday) %>:</strong></dt>
+  <dd><%= @employee.birthday %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:age) %>:</strong></dt>
+  <dd><%= @employee.age %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nation) %>:</strong></dt>
+  <dd><%= @employee.nation %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:marriage) %>:</strong></dt>
+  <dd><%= @employee.marriage %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:account_place) %>:</strong></dt>
+  <dd><%= @employee.account_place %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:account_nature) %>:</strong></dt>
+  <dd><%= @employee.account_nature %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dd><%= @employee.address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edu_start) %>:</strong></dt>
+  <dd><%= @employee.edu_start %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edu_end) %>:</strong></dt>
+  <dd><%= @employee.edu_end %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:edu_college) %>:</strong></dt>
+  <dd><%= @employee.edu_college %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:major) %>:</strong></dt>
+  <dd><%= @employee.major %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:high_education) %>:</strong></dt>
+  <dd><%= @employee.high_education %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:degree) %>:</strong></dt>
+  <dd><%= @employee.degree %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:join_work_date) %>:</strong></dt>
+  <dd><%= @employee.join_work_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:before_company) %>:</strong></dt>
+  <dd><%= @employee.before_company %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:before_job) %>:</strong></dt>
+  <dd><%= @employee.before_job %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:social_security) %>:</strong></dt>
+  <dd><%= @employee.social_security %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:house_fund) %>:</strong></dt>
+  <dd><%= @employee.house_fund %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:bank) %>:</strong></dt>
+  <dd><%= @employee.bank %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tel) %>:</strong></dt>
+  <dd><%= @employee.tel %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @employee.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:leave_date) %>:</strong></dt>
+  <dd><%= @employee.leave_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:transfer_position) %>:</strong></dt>
+  <dd><%= @employee.transfer_position %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:remark) %>:</strong></dt>
+  <dd><%= @employee.remark %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              employees_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_employee_path(@employee), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              employee_path(@employee),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

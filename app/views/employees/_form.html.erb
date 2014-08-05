@@ -1,0 +1,223 @@
+<%= form_for @employee, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :姓名, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :中心, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :center, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :部门, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :department, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :职位, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :job, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :身份证, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idcard, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :员工状态, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :status, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :入职日期, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :join_date, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :转正时间, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :positive_date, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :合同到期日, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :contract_end_date, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :司龄, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :seniority, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :性别, :class => 'control-label' %>
+    <div class="controls">
+
+      <%= f.radio_button :sex, "0", :class => "radio" %>男
+      <%= f.radio_button :sex, "1", :class => "radio" %>女
+
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :出生日期, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :birthday, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :年龄, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :age, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :民族, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nation, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :婚姻状况, :class => 'control-label' %>
+    <div class="controls">
+
+      <%= f.radio_button :marriage, "0", :class => "radio" %>未婚
+      <%= f.radio_button :marriage, "1", :class => "radio" %>已婚
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :户口所在地, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :account_place, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :户口性质, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :account_nature, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :冢庭住址, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :教育开始时间, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :edu_start, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :教育结束时间, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :edu_end, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :毕业学校, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :edu_college, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :专业, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :major, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :最高学历, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :high_education, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :学位, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :degree, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :参加工作时间, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :join_work_date, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :原工作单位, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :before_company, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :原工作职位, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :before_job, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :社保缴存情况, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :social_security, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :住房公积金缴存情况, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :house_fund, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :银行, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :bank, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :联系电话, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :tel, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :邮箱, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :email, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :离职日期, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :leave_date, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :调岗记录, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :transfer_position, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :备注, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :remark, :class => 'text_area' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                employees_path, :class => 'btn' %>
+  </div>
+<% end %>
