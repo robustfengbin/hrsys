@@ -1,0 +1,177 @@
+<%= form_for @salary, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :中心, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :center, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :部门, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :department, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :姓名, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :证件名称, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :iden_name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :身份证号, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idcard, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :入职时间, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :join_date, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :基本月薪, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :base_salary, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :加班费, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :overtime_salary, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :绩效, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :performance_salary, :class => 'number_field'%>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :奖金, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :bonus, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :饭补, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :food_salary, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :其他增加, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :other_add_salary, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :迟到早退, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :late_early, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :病事假扣款, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :leave_salary, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :其他扣款, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :other_deduct, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :当月工资所得额, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :income_salary, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :住房公积金个人, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :house_fund_person, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :五险公司, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :five_risk_company, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :五险个人, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :five_risk_person, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :税前月薪, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :pretax_salary, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :免税额北京, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :free_tax, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :应税额, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :taxable, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :税率, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :tax_rate, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :扣除数, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :deduct_salary, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :个人所得数, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :individual_income_tax, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :净收入, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :net_income, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :应收账款, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :accounts_receivable, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :实发工资, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :real_salary, :class => 'number_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                salaries_path, :class => 'btn' %>
+  </div>
+<% end %>

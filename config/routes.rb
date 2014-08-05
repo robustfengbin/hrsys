@@ -1,4 +1,7 @@
 Hrsys::Application.routes.draw do
+  resources :salaries
+
+
   resources :employees
 
 

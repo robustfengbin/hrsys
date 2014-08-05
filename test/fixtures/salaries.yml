@@ -1,0 +1,65 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  center: MyString
+  department: MyString
+  name: MyString
+  iden_name: MyString
+  idcard: MyString
+  join_date: 2014-08-05
+  base_salary: 1
+  overtime_salary: 1
+  performance_salary: 1
+  bonus: 1
+  food_salary: 1
+  other_add_salary: 1
+  late_early: MyString
+  _salary: 1
+  leave_salary: 1
+  other_deduct: 1
+  income_salary: 1
+  house_fund_person: 1
+  five_risk_company: 1
+  five_risk_person: 1
+  pretax_salary: 1
+  free_tax: 1
+  taxable: 1
+  tax_rate: 1
+  deduct_salary: 1
+  individual_income_tax: 1
+  net_income: 1
+  leave_salary: 1
+  accounts_receivable: 1
+  real_salary: 1
+
+two:
+  center: MyString
+  department: MyString
+  name: MyString
+  iden_name: MyString
+  idcard: MyString
+  join_date: 2014-08-05
+  base_salary: 1
+  overtime_salary: 1
+  performance_salary: 1
+  bonus: 1
+  food_salary: 1
+  other_add_salary: 1
+  late_early: MyString
+  _salary: 1
+  leave_salary: 1
+  other_deduct: 1
+  income_salary: 1
+  house_fund_person: 1
+  five_risk_company: 1
+  five_risk_person: 1
+  pretax_salary: 1
+  free_tax: 1
+  taxable: 1
+  tax_rate: 1
+  deduct_salary: 1
+  individual_income_tax: 1
+  net_income: 1
+  leave_salary: 1
+  accounts_receivable: 1
+  real_salary: 1

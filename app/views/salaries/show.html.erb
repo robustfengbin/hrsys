@@ -1,0 +1,75 @@
+<%- model_class = Salary -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:center) %>:</strong></dt>
+  <dd><%= @salary.center %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:department) %>:</strong></dt>
+  <dd><%= @salary.department %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @salary.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:iden_name) %>:</strong></dt>
+  <dd><%= @salary.iden_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idcard) %>:</strong></dt>
+  <dd><%= @salary.idcard %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:join_date) %>:</strong></dt>
+  <dd><%= @salary.join_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:base_salary) %>:</strong></dt>
+  <dd><%= @salary.base_salary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:overtime_salary) %>:</strong></dt>
+  <dd><%= @salary.overtime_salary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:performance_salary) %>:</strong></dt>
+  <dd><%= @salary.performance_salary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:bonus) %>:</strong></dt>
+  <dd><%= @salary.bonus %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:food_salary) %>:</strong></dt>
+  <dd><%= @salary.food_salary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:other_add_salary) %>:</strong></dt>
+  <dd><%= @salary.other_add_salary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:late_early) %>:</strong></dt>
+  <dd><%= @salary.late_early %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:leave_salary) %>:</strong></dt>
+  <dd><%= @salary.leave_salary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:other_deduct) %>:</strong></dt>
+  <dd><%= @salary.other_deduct %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:income_salary) %>:</strong></dt>
+  <dd><%= @salary.income_salary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:house_fund_person) %>:</strong></dt>
+  <dd><%= @salary.house_fund_person %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:five_risk_company) %>:</strong></dt>
+  <dd><%= @salary.five_risk_company %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:five_risk_person) %>:</strong></dt>
+  <dd><%= @salary.five_risk_person %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pretax_salary) %>:</strong></dt>
+  <dd><%= @salary.pretax_salary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:free_tax) %>:</strong></dt>
+  <dd><%= @salary.free_tax %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:taxable) %>:</strong></dt>
+  <dd><%= @salary.taxable %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tax_rate) %>:</strong></dt>
+  <dd><%= @salary.tax_rate %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:deduct_salary) %>:</strong></dt>
+  <dd><%= @salary.deduct_salary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:individual_income_tax) %>:</strong></dt>
+  <dd><%= @salary.individual_income_tax %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:net_income) %>:</strong></dt>
+  <dd><%= @salary.net_income %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:accounts_receivable) %>:</strong></dt>
+  <dd><%= @salary.accounts_receivable %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:real_salary) %>:</strong></dt>
+  <dd><%= @salary.real_salary %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              salaries_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_salary_path(@salary), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              salary_path(@salary),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

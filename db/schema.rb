@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140804120822) do
+ActiveRecord::Schema.define(:version => 20140805065825) do
 
   create_table "employees", :force => true do |t|
     t.string   "name"
@@ -51,6 +51,40 @@ ActiveRecord::Schema.define(:version => 20140804120822) do
     t.text     "remark"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+  end
+
+  create_table "salaries", :force => true do |t|
+    t.string   "center"
+    t.string   "department"
+    t.string   "name"
+    t.string   "iden_name"
+    t.string   "idcard"
+    t.date     "join_date"
+    t.integer  "base_salary"
+    t.integer  "overtime_salary"
+    t.integer  "performance_salary"
+    t.integer  "bonus"
+    t.integer  "food_salary"
+    t.integer  "other_add_salary"
+    t.string   "late_early"
+    t.integer  "_salary"
+    t.integer  "leave_salary"
+    t.integer  "other_deduct"
+    t.integer  "income_salary"
+    t.integer  "house_fund_person"
+    t.integer  "five_risk_company"
+    t.integer  "five_risk_person"
+    t.integer  "pretax_salary"
+    t.integer  "free_tax"
+    t.integer  "taxable"
+    t.integer  "tax_rate"
+    t.integer  "deduct_salary"
+    t.integer  "individual_income_tax"
+    t.integer  "net_income"
+    t.integer  "accounts_receivable"
+    t.integer  "real_salary"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
 end

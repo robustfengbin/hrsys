@@ -1,0 +1,90 @@
+<%- model_class = Salary -%>
+<div class="page-header">
+  <h1>工资信息</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:编号) %></th>
+      <th><%= model_class.human_attribute_name(:中心) %></th>
+      <th><%= model_class.human_attribute_name(:部门) %></th>
+      <th><%= model_class.human_attribute_name(:姓名) %></th>
+      <th><%= model_class.human_attribute_name(:证件名称) %></th>
+      <th><%= model_class.human_attribute_name(:身份证号) %></th>
+      <th><%= model_class.human_attribute_name(:入职时间) %></th>
+      <th><%= model_class.human_attribute_name(:基本月薪) %></th>
+      <th><%= model_class.human_attribute_name(:加班费) %></th>
+      <th><%= model_class.human_attribute_name(:绩效) %></th>
+      <th><%= model_class.human_attribute_name(:奖金) %></th>
+      <th><%= model_class.human_attribute_name(:饭补) %></th>
+      <th><%= model_class.human_attribute_name(:其他增加) %></th>
+      <th><%= model_class.human_attribute_name(:'迟到早退') %></th>
+      <th><%= model_class.human_attribute_name(:病事假) %></th>
+      <th><%= model_class.human_attribute_name(:其他扣款) %></th>
+      <th><%= model_class.human_attribute_name(:当月工资所得) %></th>
+      <th><%= model_class.human_attribute_name(:个人住房公积金) %></th>
+      <th><%= model_class.human_attribute_name(:五险公司) %></th>
+      <th><%= model_class.human_attribute_name(:五险个人) %></th>
+      <th><%= model_class.human_attribute_name(:税前月薪总额) %></th>
+      <th><%= model_class.human_attribute_name(:免税额北京) %></th>
+      <th><%= model_class.human_attribute_name(:应税额) %></th>
+      <th><%= model_class.human_attribute_name(:税率) %></th>
+      <th><%= model_class.human_attribute_name(:扣除数) %></th>
+      <th><%= model_class.human_attribute_name(:个人所得税) %></th>
+      <th><%= model_class.human_attribute_name(:净收入) %></th>
+      <th><%= model_class.human_attribute_name(:应收账款) %></th>
+      <th><%= model_class.human_attribute_name(:实发工资) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @salaries.each do |salary| %>
+      <tr>
+        <td><%= link_to salary.id, salary_path(salary) %></td>
+        <td><%= salary.center %></td>
+        <td><%= salary.department %></td>
+        <td><%= salary.name %></td>
+        <td><%= salary.iden_name %></td>
+        <td><%= salary.idcard %></td>
+        <td><%= salary.join_date %></td>
+        <td><%= salary.base_salary %></td>
+        <td><%= salary.overtime_salary %></td>
+        <td><%= salary.performance_salary %></td>
+        <td><%= salary.bonus %></td>
+        <td><%= salary.food_salary %></td>
+        <td><%= salary.other_add_salary %></td>
+        <td><%= salary.late_early %></td>
+        <td><%= salary.leave_salary %></td>
+        <td><%= salary.other_deduct %></td>
+        <td><%= salary.income_salary %></td>
+        <td><%= salary.house_fund_person %></td>
+        <td><%= salary.five_risk_company %></td>
+        <td><%= salary.five_risk_person %></td>
+        <td><%= salary.pretax_salary %></td>
+        <td><%= salary.free_tax %></td>
+        <td><%= salary.taxable %></td>
+        <td><%= salary.tax_rate %></td>
+        <td><%= salary.deduct_salary %></td>
+        <td><%= salary.individual_income_tax %></td>
+        <td><%= salary.net_income %></td>
+        <td><%= salary.accounts_receivable %></td>
+        <td><%= salary.real_salary %></td>
+        <td><%=l salary.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_salary_path(salary), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      salary_path(salary),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_salary_path,
+            :class => 'btn btn-primary' %>
